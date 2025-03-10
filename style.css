@@ -1,0 +1,15 @@
+body{
+    background-color: aqua;
+    color: blue;
+    font-family: sans-serif;
+    text-align: center;
+}
+a{
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    font-size: xx-large;
+    padding: 0.5em;
+    border-radius: 30px;
+}
+
