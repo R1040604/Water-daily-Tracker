@@ -45,3 +45,43 @@ div p, .info h3, .gemiddelde article h3{
 .nummer p {
 margin: 0;
 }
+.progress-container {
+    align-items: center;
+    align-content: center;
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+svg {
+    transform: rotate(-90deg);
+}
+
+circle {
+    fill: none;
+    stroke-width: 5;
+    cx: 50;
+    cy: 50;
+    r: 45;
+}
+
+.progress-bg {
+    stroke: white;
+    opacity: 0.3;
+}
+
+.progress {
+    stroke: #5b4d88;
+    stroke-dasharray: 283; /* Volledige omtrek */
+    stroke-dashoffset: calc(283 - (283 * 80) / 100); /* 80% gevuld */
+    transition: stroke-dashoffset 0.6s;
+}
+.progress-container h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: blue;
+    font-size: 18px;
+    font-weight: bold;
+}
