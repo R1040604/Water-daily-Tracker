@@ -1,10 +1,11 @@
-body{
+body {
     background-color: aqua;
     color: blue;
     font-family: sans-serif;
     text-align: center;
 }
-#add{
+
+#add {
     background-color: blue;
     color: white;
     text-decoration: none;
@@ -12,14 +13,16 @@ body{
     padding: 0.5em;
     border-radius: 30px;
 }
-#pijl{
-margin-right: 400px;
+
+#pijl {
+    margin-right: 400px;
 }
-#pijl img{
+
+#pijl img {
     width: 50px;
-    
 }
-#opslaan{
+
+#opslaan {
     background-color: rgb(109, 190, 163);
     color: blue;
     text-decoration: none;
@@ -30,32 +33,43 @@ margin-right: 400px;
     padding-right: 2em;
     border-radius: 20px;
 }
-div p, .info h3, .gemiddelde article h3{
+
+div p, .info h3, .gemiddelde article h3 {
     background-color: rgb(168, 167, 167);
     display: inline-block;
     padding: 1em;
 }
+
 .nummer {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 80px;
 }
+
 .nummer p {
-margin: 0;
+    margin: 0;
 }
-.gemiddelde{
+
+.gemiddelde {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+.hoeveelheid {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Voeg deze regel toe om de inhoud centraal uit te lijnen */
+}
+
 .progress-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
     width: 120px;
     height: 120px;
+    margin-top: 20px; /* Voeg deze regel toe om wat ruimte tussen de vraag en de cirkel te creëren */
 }
 
 svg {
@@ -83,7 +97,7 @@ circle {
 }
 
 .progress-container h3 {
-    position: absolute;
+    position: fixed;
     align-items: center;
     top: 50%;
     left: 50%;
