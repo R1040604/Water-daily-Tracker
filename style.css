@@ -97,7 +97,7 @@ circle {
 }
 
 .progress-container h3 {
-    position: fixed;
+    position: sticky;
     align-items: center;
     top: 50%;
     left: 50%;
