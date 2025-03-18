@@ -105,3 +105,15 @@ circle {
     font-size: 18px;
     font-weight: bold;
 }
+@media (min-width: 600px) {
+    #pijl{
+        margin-right: 1450px;
+    }
+    .gemiddelde{
+       display: inline-block;
+    }
+    main img{
+        max-width: 500px;
+        display: inline-block;
+    }
+}
