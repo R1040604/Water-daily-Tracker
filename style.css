@@ -95,13 +95,12 @@ circle {
     stroke-dashoffset: calc(283 - (283 * 80) / 100); /* 80% gevuld */
     transition: stroke-dashoffset 0.6s;
 }
-
 .progress-container h3 {
-    position: sticky;
+    position: absolute;
     align-items: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /* top: 50%;
+    left: 50%; */
+    /* transform: translate(-50%, -50%); */
     color: blue;
     font-size: 18px;
     font-weight: bold;
