@@ -105,6 +105,15 @@ circle {
     font-size: 18px;
     font-weight: bold;
 }
+.red {
+    color: red;
+  }
+  .orange {
+    color: orange;
+  }
+  .green {
+    color: green;
+  }
 @media (min-width: 600px) {
     #pijl{
         margin-right: 1450px;
