@@ -2,10 +2,10 @@ export default class WaterTracker{
     constructor() {
         this.totalWater = 0;
         this.water = [];
-    }
-    
+} 
     addWater(liter){
-        this.totalWater += amount;
+        this.totalWater += liter;
+        this.water.push(liter);
         console.log(`Je hebt tot nu toe ${liter}l water gedronken. Totaal: ${this.totalWater}liter`);
     }
     
