@@ -5,3 +5,7 @@ document.getElementById('opslaan').addEventListener('click', (e) => {
     localStorage.setItem('totalWater', JSON.stringify(tracker.getTotalWater()));
     console.log('Water intake saved to local storage.');
 });
+let totalWater = JSON.parse(localStorage.getItem("water")) || [];
+console.log(water);
+water.push(liter);
+localStorage.setItem("totalWater", JSON.stringify(liter));
