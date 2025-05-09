@@ -50,7 +50,9 @@ div p, .info h3, .gemiddelde article h3 {
 
 .nummer p {
     margin: 0;
-    font-weight: bold;
+}
+.nummer .waterdata p{
+    font-weight: bolder;
 }
 
 .gemiddelde {
