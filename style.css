@@ -10,8 +10,9 @@ body {
     color: white;
     text-decoration: none;
     font-size: xx-large;
-    padding: 0.5em;
-    border-radius: 30px;
+    padding: 0.3em;
+    margin-bottom: 140px;
+    border-radius: 100px;
 }
 
 #pijl {
@@ -49,6 +50,7 @@ div p, .info h3, .gemiddelde article h3 {
 
 .nummer p {
     margin: 0;
+    font-weight: bold;
 }
 
 .gemiddelde {
@@ -64,6 +66,7 @@ div p, .info h3, .gemiddelde article h3 {
 }
 
 .progress-container {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
