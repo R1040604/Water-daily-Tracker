@@ -1,26 +1,52 @@
 import WaterTracker from './Tracker/Tracker.js';
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   const tracker = new WaterTracker();
 
-  const opslaanBtn = document.getElementById('opslaan');
-  const litersText = document.getElementById('liters');
+  // Totaal water tonen op index.html
+  const totaalElement = document.getElementById('totaalWater');
+  if (totaalElement) {
+    totaalElement.textContent = `${tracker.getTotalWater()}L`;
+  }
 
-  if (opslaanBtn) {
-    opslaanBtn.addEventListener('click', function (e) {
-      e.preventDefault();
-      const literValue = parseFloat(litersText?.textContent || "0.8"); // fallback
-      tracker.addWater(literValue);
-      alert(`Toegevoegd: ${literValue}L`);
+  // Resetknop werkt alleen op index.html
+  const resetBtn = document.getElementById('reset');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      tracker.resetWater();
+      if (totaalElement) totaalElement.textContent = '0L';
+      alert("Waterinname is gereset.");
     });
   }
 
-  // Kleur toevoegen aan dagwaarden
+  // Water toevoegen op details.html
+  const input = document.getElementById('waterInput');
+  const saveBtn = document.getElementById('saveWater');
+  const litersDisplay = document.getElementById('liters');
+
+  if (saveBtn && input) {
+    saveBtn.addEventListener('click', () => {
+      const value = parseFloat(input.value);
+      if (!isNaN(value) && value > 0) {
+        tracker.addWater(value);
+        if (litersDisplay) litersDisplay.textContent = `${tracker.getTotalWater()}L`;
+        input.value = '';
+        alert(`${value}L toegevoegd!`);
+      } else {
+        alert("Voer een geldig aantal liter in.");
+      }
+    });
+
+    // Bij laden juiste waarde tonen op details
+    if (litersDisplay) litersDisplay.textContent = `${tracker.getTotalWater()}L`;
+  }
+
+  // Kleurfunctionaliteit index.html
   const dataDiv = document.querySelector('.waterdata p');
   if (dataDiv) {
     const parentDiv = dataDiv.parentElement;
     const waterValues = dataDiv.textContent.match(/[\d.]+/g) || [];
-    parentDiv.textContent = ''; // wis originele tekst
+    parentDiv.textContent = '';
 
     waterValues.forEach(value => {
       const val = parseFloat(value);

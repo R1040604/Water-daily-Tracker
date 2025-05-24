@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -26,12 +26,11 @@
     <article><h3>Wekelijks gemiddelde: 1.5L</h3></article>
     <article><h3>Maandelijks gemiddelde: 5L</h3></article>
   </section>
-
-  <div>
-    <a id="opslaan" href="#">Opslaan</a>
-  </div>
-
+<div class="invoer">
+  <input type="number" id="waterInput" placeholder="Aantal liter" step="0.1" min="0" />
+  <button id="saveWater">Toevoegen</button>
+</div>
   <script type="module" src="Tracker/Tracker.js"></script>
   <script type="module" src="sketch.js"></script>
 </body>
-</html>
+</html> 

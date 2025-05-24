@@ -1,4 +1,4 @@
-body {
+ body {
     background-color: aqua;
     color: blue;
     font-family: sans-serif;
@@ -119,6 +119,62 @@ circle {
   .green {
     color: green;
   }
+  #reset {
+  background-color: red;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  margin-top: 1em;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+}
+.invoer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#waterInput {
+  padding: 0.5em;
+  font-size: 1em;
+  width: 100px;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+#saveWater {
+  background-color: #5b4d88;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.invoer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#waterInput {
+  padding: 0.5em;
+  font-size: 1em;
+  width: 100px;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+#saveWater {
+  background-color: #5b4d88;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+}
 @media (min-width: 600px) {
     #pijl{
         margin-right: 1450px;
