@@ -4,6 +4,11 @@ export default class WaterTracker {
       this.water = saved;
       this.totalWater = saved.reduce((acc, val) => acc + val, 0);
     }
+    resetWater() {
+  this.water = [];
+  this.totalWater = 0;
+  localStorage.removeItem("water");
+}
   
     addWater(liter) {
       this.water.push(liter);

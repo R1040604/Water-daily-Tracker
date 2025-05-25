@@ -9,15 +9,21 @@ document.addEventListener('DOMContentLoaded', () => {
     totaalElement.textContent = `${tracker.getTotalWater()}L`;
   }
 
-  // Resetknop werkt alleen op index.html
-  const resetBtn = document.getElementById('reset');
-  if (resetBtn) {
-    resetBtn.addEventListener('click', () => {
-      tracker.resetWater();
-      if (totaalElement) totaalElement.textContent = '0L';
-      alert("Waterinname is gereset.");
-    });
-  }
+// Reset-knop op index.html
+const resetBtn = document.getElementById('reset');
+if (resetBtn) {
+  resetBtn.addEventListener('click', () => {
+    tracker.resetWater(); // reset lokaal geheugen
+    if (totaalElement) totaalElement.textContent = '0L'; // update visuele weergave
+    alert("Waterinname is gereset.");
+
+    // Eventueel: reset andere elementen zoals grafieken/overzichten etc.
+    const dataDiv = document.querySelector('.waterdata p');
+    if (dataDiv) {
+      dataDiv.textContent = ''; // maak visueel leeg
+    }
+  });
+}
 
   // Water toevoegen op details.html
   const input = document.getElementById('waterInput');
